@@ -1,7 +1,6 @@
 package bootstrap;
 
 import annotation.HttpRequestHandler;
-import annotation.HttpRequestParameter;
 import com.sun.net.httpserver.HttpServer;
 import core.HttpInvokerFacade;
 
@@ -37,6 +36,7 @@ public class Bootstrap {
 
         addHttpInvoker(new IndexInvoker());
         addHttpInvoker(new UrlsInvoker());
+        addHttpInvoker(new ShutdownInvoker(this));
     }
 
     public Bootstrap start() throws IOException {
@@ -49,7 +49,19 @@ public class Bootstrap {
         return this;
     }
 
-    public Bootstrap stop() {
+    public synchronized void await() {
+        try {
+            this.wait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public synchronized void wakeup() {
+        this.notifyAll();
+    }
+
+    public synchronized Bootstrap stop() {
         if (executor != null) {
             executor.shutdown();
         }
@@ -176,6 +188,17 @@ public class Bootstrap {
         }
     }
 
+    @HttpRequestHandler(requestUrl = "/shutdown", method = "service", description = "shutdown invoker server")
+    public class ShutdownInvoker {
 
+        private Bootstrap bootstrap;
+        public ShutdownInvoker (Bootstrap bootstrap) {
+            this.bootstrap = bootstrap;
+        }
 
+        public void service(PrintWriter out) {
+            out.println("Goodbye, Http Invoker is shuting down!");
+            bootstrap.wakeup();
+        }
+    }
 }

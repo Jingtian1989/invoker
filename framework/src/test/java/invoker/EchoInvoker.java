@@ -24,19 +24,7 @@ public class EchoInvoker {
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.addHttpInvoker(new EchoInvoker());
             bootstrap.start();
-            try {
-                Scanner scanner = new Scanner(System.in);
-                String command = null;
-                while (scanner.hasNextLine()) {
-                    command = scanner.nextLine();
-                    if (command.equals("shutdown")) {
-                        break;
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            bootstrap.stop();
+            bootstrap.await();
         }catch (Exception e) {
             e.printStackTrace();
         }
