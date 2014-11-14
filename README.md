@@ -6,11 +6,11 @@ invoker is a http service library.
 # how to use it
 
 **step 1**
-implement a invoker and annotate it with **HttpRequestHandler** which **requestUrl** stands for the 
-invoker's serving url and `method` stands for the serving method.
+implement a invoker and annotate it with **_HttpRequestHandler_** which **_requestUrl_** stands for the 
+invoker's serving url and **_method_** stands for the serving method.
 
 **step 2**
-annotate the serving method's parameter with **HttpRequestParameter** which **name** stands for the
+annotate the serving method's parameter with **_HttpRequestParameter_** which **_name_** stands for the
 http query parameter.
 
 **step 3**
