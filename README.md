@@ -19,11 +19,12 @@ register the invokers with bootstrap and start it.
 the following code demonstrate a echo invoker. 
 
 ```js
-@HttpRequestHandler(requestUrl = "/echo", method = "service", description = "echo what you type")
+@HttpRequestHandler(requestUrl = "/echo", method = "service", description = 
+			"echo what you type")
 public class EchoInvoker {
 
-
-    public void service(PrintWriter out, @HttpRequestParameter(name = "string") String in) {
+    public void service(PrintWriter out, @HttpRequestParameter(name = "string")
+    	 String in) {
         out.println(in);
     }
 
