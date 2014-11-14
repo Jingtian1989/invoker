@@ -25,6 +25,7 @@ public class EchoInvoker {
             bootstrap.addHttpInvoker(new EchoInvoker());
             bootstrap.start();
             bootstrap.await();
+            bootstrap.stop();
         }catch (Exception e) {
             e.printStackTrace();
         }
