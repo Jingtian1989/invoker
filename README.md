@@ -6,11 +6,11 @@ invoker is a tiny webservice library.
 # how to use it
 
 **step 1**
-implement a invoker and annotate it with **_HttpRequestHandler_** ,parameters **_requestUrl_** for the 
-invoker's serving url and **_method_** for the serving method.
+implement a invoker and annotate it with **_HttpRequestHandler_** parameters **_requestUrl_** for the 
+serving url and **_method_** for the serving method.
 
 **step 2**
-annotate the serving method's parameter with **_HttpRequestParameter_** ,parameters **_name_** for the
+annotate the serving method's parameter with **_HttpRequestParameter_** parameters **_name_** for the
 http query parameter.
 
 **step 3**
