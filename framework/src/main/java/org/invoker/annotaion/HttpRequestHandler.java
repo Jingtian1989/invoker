@@ -1,4 +1,4 @@
-package annotation;
+package org.invoker.annotaion;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

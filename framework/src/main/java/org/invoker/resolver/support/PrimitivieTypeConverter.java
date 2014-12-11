@@ -1,4 +1,4 @@
-package resolver.support;
+package org.invoker.resolver.support;
 
 /**
  * Created by jingtian.zjt on 2014/11/13.

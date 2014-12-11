@@ -1,5 +1,6 @@
 package bootstrap;
 
+import org.invoker.bootstrap.Bootstrap;
 import org.junit.Test;
 
 /**

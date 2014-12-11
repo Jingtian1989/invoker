@@ -1,12 +1,12 @@
-package resolver.support;
+package org.invoker.resolver.support;
 
-import resolver.Resolver;
-import resolver.ResolverContext;
+import org.invoker.resolver.Resolver;
+import org.invoker.resolver.ResolverContext;
 
 /**
  * Created by jingtian.zjt on 2014/11/13.
  */
-public class PrimitiveResolverSupport implements Resolver{
+public class PrimitiveResolverSupport implements Resolver {
 
 
     private String parameterName;

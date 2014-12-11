@@ -1,4 +1,4 @@
-package resolver;
+package org.invoker.resolver;
 
 /**
  * Created by jingtian.zjt on 2014/11/13.

@@ -1,8 +1,8 @@
-package bootstrap;
+package org.invoker.bootstrap;
 
-import annotation.HttpRequestHandler;
 import com.sun.net.httpserver.HttpServer;
-import core.HttpInvokerFacade;
+import org.invoker.invoker.HttpInvokerFacade;
+import org.invoker.annotaion.HttpRequestHandler;
 
 import java.io.IOException;
 import java.io.PrintWriter;

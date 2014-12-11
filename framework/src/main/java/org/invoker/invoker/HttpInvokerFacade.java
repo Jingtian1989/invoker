@@ -1,14 +1,12 @@
-package core;
+package org.invoker.invoker;
 
-import annotation.HttpRequestHandler;
-import annotation.HttpRequestHandler;
-import annotation.HttpRequestParameter;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import org.omg.Dynamic.Parameter;
-import resolver.Resolver;
-import resolver.ResolverContext;
-import resolver.ResolverFactory;
+import org.invoker.annotaion.HttpRequestHandler;
+import org.invoker.annotaion.HttpRequestParameter;
+import org.invoker.resolver.Resolver;
+import org.invoker.resolver.ResolverContext;
+import org.invoker.resolver.ResolverFactory;
 
 import java.io.IOException;
 import java.io.OutputStream;

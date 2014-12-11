@@ -1,4 +1,4 @@
-package resolver;
+package org.invoker.resolver;
 
 import java.io.PrintWriter;
 import java.util.Map;

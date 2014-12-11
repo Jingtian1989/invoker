@@ -1,9 +1,8 @@
-package resolver;
+package org.invoker.resolver;
 
-import annotation.HttpRequestParameter;
-import annotation.HttpRequestParameter;
-import resolver.support.PrimitiveResolverSupport;
-import resolver.support.PrintWriterResolverSupport;
+import org.invoker.annotaion.HttpRequestParameter;
+import org.invoker.resolver.support.PrimitiveResolverSupport;
+import org.invoker.resolver.support.PrintWriterResolverSupport;
 
 import java.io.PrintWriter;
 import java.lang.annotation.Annotation;
