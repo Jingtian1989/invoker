@@ -1,6 +1,6 @@
 # invoker
 
-invoker is a http service library. 
+invoker is a tiny webservice library. 
 
 
 # how to use it
